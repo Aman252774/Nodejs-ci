@@ -4,7 +4,7 @@ on:
   push:
     branches: 
             main 
-            
+
   pull_request:
     branches:
             main 
@@ -24,6 +24,8 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
+        working-directory: ./app
 
       - name: Build the Project
         run: npm run build
+        working-directory: ./app
